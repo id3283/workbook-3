@@ -12,6 +12,9 @@ public class Employee {
         return hoursWorked * payRate;
     }
 
+    public Employee() {
+    }
+
     public Employee(int employeeId, String name, double hoursWorked, double payRate) {
         this.employeeId = employeeId;
         this.name = name;
