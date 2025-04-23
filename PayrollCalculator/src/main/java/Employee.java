@@ -8,10 +8,6 @@ public class Employee {
         return this.hoursWorked * this.payRate;
     }
 
-    public double calculateGrossPay(double hoursWorked, double payRate) {
-        return hoursWorked * payRate;
-    }
-
     public Employee() {
     }
 

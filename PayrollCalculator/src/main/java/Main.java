@@ -12,28 +12,25 @@ public class Main {
             String input;
             BufferedReader bufferedReader = new BufferedReader(reader);
 
-            int lineIndex = 0;
             while ((input = bufferedReader.readLine()) != null) {
                 String[] lineData = input.split("\\|");
 
                 if (lineData[0].equals("id")) {
                     continue;
                 }
-                System.out.println(lineData);
 
                 int id = Integer.parseInt(lineData[0]);
                 String name = lineData[1];
                 double hours = Double.parseDouble(lineData[2]);
                 double rate = Double.parseDouble(lineData[3]);
 
-                Employee newEmloyee = new Employee(id, name, hours, rate);
-                System.out.println("ID: " + newEmloyee.getEmployeeId() );
+                Employee x;
+                x = new Employee(id, name, hours, rate);
+//                System.out.println("ID: " + newEmloyee.getEmployeeId() + " Name: " + newEmloyee.getName() + " Pay: " + newEmloyee.calculateGrossPay());
+                System.out.printf("ID: %d Name: %s Pay: %.2f\n", x.getEmployeeId(), x.getName(), x.calculateGrossPay());
             }
         } catch (Exception e) {
             System.err.println("There was a problem of some sort reading the file: " + e.getMessage());
         }
-
-
-
     }
 }
